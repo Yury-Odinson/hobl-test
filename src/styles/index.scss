@@ -1,5 +1,9 @@
 @import './variables';
 
+* {
+  color: $blue;
+}
+
 body {
   height: 100vh;
   background: rgb(216, 239, 255);
@@ -58,23 +62,104 @@ body {
 
 .container {
   margin: 40px auto;
-  padding: 15px 40px;
+  display: flex;
+  flex-direction: column;
   max-width: 1380px;
-  height: 700px;
   background-color: #fff;
   box-shadow: rgba(142, 160, 174, 0.24) 1px 1px 20px;
 
   &-title {
-    margin: -15px -40px;
-    color: $blueText;
+    color: $blue;
     height: 110px;
     background-image: url("../assets/img/title-background.png");
     background-repeat: no-repeat;
 
     &__item {
-      padding: 15px 40px;
+      padding: 15px 44px;
       font-size: 40px;
       font-weight: 700;
     }
   }
+
+  &-tabs {
+    margin: 50px 0 125px;
+    padding: 0 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &-separator {
+    margin: 45px;
+    padding: 20px 30px;
+    background: rgb(253, 217, 102);
+    background: linear-gradient(90deg, rgba(253, 217, 102, 1) 0%, rgba(188, 215, 126, 1) 100%);
+    border-radius: 20px;
+
+    & > h2 {
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.3px;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.3px;
+  }
+
+
+}
+
+.tab {
+  position: relative;
+  padding: 36px 40px;
+  display: flex;
+  gap: 27px;
+  border: 1px solid $blue;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &-open {
+    position: absolute;
+    top: -24px;
+    right: -24px;
+  }
+
+  &-answer {
+    position: relative;
+
+    & > p {
+      position: absolute;
+      padding: 10px 0;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+
+      & > span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-description {
+    position: relative;
+    max-width: 62%;
+    font-size: 24px;
+    letter-spacing: 0.1px;
+
+    &__blur {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+
 }
