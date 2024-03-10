@@ -81,6 +81,12 @@ body {
     }
   }
 
+  @media (max-width: 1000px) {
+    &-title > * {
+      text-align: center;
+    }
+  }
+
   &-tabs {
     margin: 50px 0 125px;
     padding: 0 44px;
@@ -112,14 +118,11 @@ body {
     letter-spacing: 0.3px;
   }
 
-
   &-cards {
     padding: 40px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    //flex-direction: column;
-    //border: 1px solid red;
   }
 
   &-card {
@@ -127,11 +130,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    max-width: 410px;
+    max-width: 32%;
     border-radius: 20px;
     text-align: center;
-
     background: rgb(251, 253, 255);
     background: linear-gradient(93deg, rgba(251, 253, 255, 1) 0%, rgba(216, 239, 255, 1) 100%);
 
@@ -156,17 +157,35 @@ body {
     &__description {
       font-size: 24px;
       font-weight: 400;
-      //letter-spacing: 0.1px;
     }
+  }
 
+  @media (max-width: 1000px) {
+    &-card > h4 {
+      font-size: 22px;
+    }
+    &-card > p {
+      font-size: 20px;
+    }
+  }
 
+  @media (max-width: 800px) {
+    &-cards {
+      gap: 20px;
+    }
+    &-card {
+      max-width: 100%;
+    }
+    &-card > * {
+      font-size: 16px;
+    }
   }
 
   &-description-card {
 
     margin: 10px 0;
     padding: 40px;
-    max-width: 630px;
+    max-width: 50%;
     border-radius: 20px;
     background: rgb(251, 253, 255);
     background: linear-gradient(93deg, rgba(251, 253, 255, 1) 0%, rgba(216, 239, 255, 1) 100%);
@@ -177,16 +196,31 @@ body {
     }
   }
 
+  @media (max-width: 800px) {
+    &-description-card {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
   &-arrows {
     margin: 0;
     display: flex;
     justify-content: center;
     gap: 30px;
     width: 100%;
-    //border: 1px solid red;
   }
 
-
+  @media (max-width: 1000px) {
+    &-arrows__item {
+      width: 40%;
+    }
+  }
+  @media (max-width: 800px) {
+    &-arrows {
+      display: none;
+    }
+  }
 }
 
 .tab {
@@ -236,7 +270,17 @@ body {
       background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     }
   }
+}
 
+@media (max-width: 1000px) {
+  .tab {
+    padding: 10px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .tab > * {
+    padding: 0;
+  }
 }
 
 .modal-background {
@@ -253,12 +297,13 @@ body {
 .modal {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 40px;
   display: flex;
   gap: 20px;
   flex-direction: column;
-  width: 1290px;
+  max-width: 90%;
   background-color: #fff;
   border: 1px solid $blue;
   border-radius: 20px;
@@ -271,5 +316,22 @@ body {
   &-images {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 570px) {
+  body {
+    position: relative;
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    transform: translate(0%, 0%);
+    border: none;
+    border-radius: 0;
   }
 }

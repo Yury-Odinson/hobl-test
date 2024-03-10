@@ -14,7 +14,7 @@ export const Modal = ({toggle, type}: ModalProps) => {
     const choseModal = () => {
         if (typeModal === "first") {
             return (
-                <div className="modal">
+                <div className="modal" onClick={handlerCloseModal}>
                     <p>
                         В десятилетнем исследовании <strong>«Генетическая эпидемиология ХОБЛ» (COPDGene)</strong> среди
                         пациентов с ХОБЛ,
@@ -38,7 +38,7 @@ export const Modal = ({toggle, type}: ModalProps) => {
             );
         } else {
             return (
-                <div className="modal">
+                <div className="modal" onClick={handlerCloseModal}>
                     <p>
                         <strong>
                             Большинство пациентов с ХОБЛ столкнется с обострениями: как минимум одно среднетяжелое или
