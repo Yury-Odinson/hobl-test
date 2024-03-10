@@ -8,3 +8,8 @@ export type DescriptionsCardProps = {
     description: string,
     id: number
 };
+
+export type ModalProps = {
+    toggle: any;
+    type: string
+};
