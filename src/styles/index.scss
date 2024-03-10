@@ -5,7 +5,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   background: rgb(216, 239, 255);
   background: linear-gradient(0deg, rgba(216, 239, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
@@ -24,13 +24,13 @@ body {
   }
 
   &__figure1 {
-    left: 11%;
-    height: 77px;
+    left: 10%;
+    height: 79px;
   }
 
   &__figure2 {
     left: 23%;
-    height: 69px;
+    height: 67px;
   }
 
   &__figure3 {
@@ -95,6 +95,7 @@ body {
     background: rgb(253, 217, 102);
     background: linear-gradient(90deg, rgba(253, 217, 102, 1) 0%, rgba(188, 215, 126, 1) 100%);
     border-radius: 20px;
+    cursor: default;
 
     & > h2 {
       font-size: 28px;
@@ -109,6 +110,80 @@ body {
     font-weight: 700;
     text-align: center;
     letter-spacing: 0.3px;
+  }
+
+
+  &-cards {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    //flex-direction: column;
+    //border: 1px solid red;
+  }
+
+  &-card {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 410px;
+    border-radius: 20px;
+    text-align: center;
+
+    background: rgb(251, 253, 255);
+    background: linear-gradient(93deg, rgba(251, 253, 255, 1) 0%, rgba(216, 239, 255, 1) 100%);
+
+    &-img {
+      position: relative;
+
+      & > p {
+        position: absolute;
+        top: 48%;
+        right: 14%;
+        font-size: 48px;
+        font-weight: 700;
+      }
+    }
+
+    &__title {
+      margin: 5px 0 15px;
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    &__description {
+      font-size: 24px;
+      font-weight: 400;
+      //letter-spacing: 0.1px;
+    }
+
+
+  }
+
+  &-description-card {
+
+    margin: 10px 0;
+    padding: 40px;
+    max-width: 630px;
+    border-radius: 20px;
+    background: rgb(251, 253, 255);
+    background: linear-gradient(93deg, rgba(251, 253, 255, 1) 0%, rgba(216, 239, 255, 1) 100%);
+
+    &__item {
+      font-size: 24px;
+      letter-spacing: 0.6px;
+    }
+  }
+
+  &-arrows {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    //border: 1px solid red;
   }
 
 
